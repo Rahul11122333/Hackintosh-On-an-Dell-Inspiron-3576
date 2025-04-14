@@ -2,6 +2,14 @@
 
 Hackintoshing an Dell inspiron 3576 And helping others,Giving the EFI also.
 
+1. This is how i Have It Right Now
+
+![Screenshot 2025-04-14 at 5 23 49 AM](https://github.com/user-attachments/assets/4f72c7f3-df6b-4587-905c-0dcfec375436)
+
+2. This are the specs
+
+![Screenshot 2025-04-14 at 5 28 18 AM](https://github.com/user-attachments/assets/1b83142c-9cce-4af7-b88a-ec1c99ea776b)
+
 # Specs:
 
 1. An intel i3 7020U.
