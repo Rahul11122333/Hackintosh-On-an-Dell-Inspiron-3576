@@ -2,6 +2,7 @@
 Hackintoshing an Dell inspiron 3576 And helping others,Giving the EFI also.
 
 Now Coming to point what works And what don't work:
+
 Working,
 !. Bluetooth
 2. Ethernet
