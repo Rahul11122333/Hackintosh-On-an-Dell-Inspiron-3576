@@ -24,37 +24,72 @@ Hackintoshing an Dell inspiron 3576 And helping others,Giving the EFI also.
 
 # Now Coming to point what works And what don't work:
 
-# ❇️ Working, ❇️
+   # # Very Detailed Information: #
 
-1. Bluetooth ✅
+# ✅ Working Features:
 
-2. Ethernet ✅
-   
-3. SD card Reader ✅
-   
-4. Grapics Acceleration ✅
-   
-5. Sound ✅
-  
-6. Battery ✅ 
-  
-7. Keyboard ✅ 
-    
-8. trackpad ✅ 
-    
-9. Usb Ports ✅ 
-    
-10. HDMI (External Screen) ✅
-   
-# ⚠️ Not working, ⚠️
+macOS Ventura successfully installed using OpenCore Legacy Patcher.
 
-1. Wifi ❌
+Ethernet (Realtek PCIe FE Family Controller) is working.
 
-2. Not Stable Partially ❌
+Bluetooth via generic USB dongle is working.
+
+SD Card Reader (Realtek) is functioning using RealtekCardReader.kext.
+
+Trackpad gestures (basic ones) are working.
+
+macOS updates like Sequoia available (although installer stuck at 28 mins for now).
+
+VRAM increased to 2.5GB using framebuffer-unifiedmem patch (000000A0).
+
+Dual boot with Windows is working.
+
+Apple ID login successful.
+
+# ❌ Non-Working / Buggy Features:
+
+Wi-Fi not working (QCA9377 is unsupported in macOS).
+
+Left-side USB port not working (Bluetooth dongle works, but general USB devices not detected).
+
+Launchpad gesture barely works (0.5/10 success ratio).
+
+AirDrop, Handoff not working (due to Wi-Fi limitations).
+
+# 🛠️ Helpful Tools You Used/Should Use:
+
+OpenCore Configurator (for tweaking config.plist)
+
+ProperTree (for config.plist editing)
+
+IORegistryExplorer (to check device tree)
+
+GenSMBIOS (for generating serials)
+
+Hackintool (for checking kexts/patches)
+
+MountEFI (for mounting EFI partitions)
+
+OpenCore Auxiliary Tools (OCAT) for managing OC config in a GUI
+
+Kext Updater or Dortania’s Kext Repo for downloading/updating kexts
+
+# 💡 Future Suggestions:
+
+Try USB Mapping with Hackintool to get the left USB port working.
+
+Consider replacing Wi-Fi card with a macOS-compatible one (like BCM94360NG).
+
+Test alternate layouts for ALC236 audio if you face issues.
+
+Use VNC or scrcpy to mirror/extend display on your Android (Realme C55).
+
+Add more detailed documentation + screenshots to your GitHub repo (looks cool already!).
+
 
 # Creadits:
 
 To me Rahul And Ollarila Pre-Made Raw Image And Base EFI
 
 So, Thanks For the time given to see. I will try My best to Keep it UPTO Date.
-    
+
