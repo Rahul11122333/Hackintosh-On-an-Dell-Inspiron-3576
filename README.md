@@ -24,8 +24,6 @@ Hackintoshing an Dell inspiron 3576 And helping others,Giving the EFI also.
 
 # Now Coming to point what works And what don't work:
 
-   # # Very Detailed Information: #
-
 # ✅ Working Features:
 
 macOS Ventura successfully installed using OpenCore Legacy Patcher.
@@ -86,6 +84,114 @@ Use VNC or scrcpy to mirror/extend display on your Android (Realme C55).
 
 Add more detailed documentation + screenshots to your GitHub repo (looks cool already!).
 
+# # 🧰 Detailed Installation Guide # #
+
+# Prepare USB Installer:
+
+Use macOS to download Ventura from App Store or gibMacOS.
+
+Create USB installer using createinstallmedia or tools like OCLP.
+
+# BIOS Settings:
+
+Disable Secure Boot
+
+Set SATA mode to AHCI
+
+Disable Fast Boot
+
+Create EFI Folder:
+
+Use OpenCore Legacy Patcher to generate EFI folder.
+
+Customize config.plist using ProperTree or OCAT.
+
+# Boot into Installer:
+
+Plug in USB, boot to OpenCore, and choose macOS installer.
+
+Format target disk with Disk Utility (APFS + GUID)
+
+Install macOS:
+
+Complete macOS installation (may reboot a few times)
+
+Post-Install Setup:
+
+Install OCLP to internal disk for post-install patches.
+
+Add kexts and adjust config for your hardware.
+
+Dual Boot Windows:
+
+Keep Windows bootloader intact.
+
+Use F12 to select OS when booting.
+
+# 🗂️ EFI Folder Structure
+
+![Screenshot 2025-04-14 at 5 55 58 AM](https://github.com/user-attachments/assets/ecbb7920-e414-415e-a135-cbfa09f8e25f)
+
+
+# 🛠️ Troubleshooting Tips
+
+Ethernet not working:
+
+Switched between RealtekR1000 and RealtekRTL8111 kexts.
+
+RealtekR1000SL.kext worked for FE controller.
+
+Bluetooth not detected:
+
+Used generic dongle (no-brand) — worked instantly.
+
+macOS install stuck at 28 mins:
+
+Wait patiently, avoid interrupting. Took ~40 mins.
+
+Trackpad gestures unreliable:
+
+Works partially. Try using BetterTouchTool for more control.
+
+OpenCore not showing Windows boot option:
+
+Use bootmgfw.efi from Windows and place in EFI > Microsoft.
+
+💻 Hardware Compatibility Notes
+
+BIOS Tweaks:
+
+AHCI mode enabled
+
+Secure Boot disabled
+
+CSM disabled for OpenCore
+
+Audio:
+
+ALC236 layout ID 11 worked well.
+
+VRAM:
+
+Increased to 2.5GB via framebuffer-unifiedmem: 000000A0
+
+🔁 Regular Updates
+
+# This repository will be updated with:
+
+New macOS updates tested
+
+Working kext versions
+
+Configuration changes
+
+Any stability fixes
+
+# 📎 Notes
+
+Feel free to fork or improve this setup for other Dell models.
+
+Shoutout to Dortania and OpenCore communities!
 
 # Creadits:
 
